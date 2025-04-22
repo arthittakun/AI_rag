@@ -3,3 +3,6 @@ python-dotenv
 fastapi
 uvicorn
 pydantic
+swagger-ui-bundle
+fastapi-swagger-ui
+openapi-spec-validator
