@@ -8,8 +8,9 @@ class ConnectLLM:
     @staticmethod
     def senText(prompt):
         URL = os.getenv('URL')
+        MODEL = os.getenv('MODEL')
         data = {
-            "model": "gpt-3.5-turbo",
+            "model": MODEL,
             "prompt": prompt,
             "stream" : False
         }

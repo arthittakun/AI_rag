@@ -20,9 +20,9 @@ class ImageRequest(BaseModel):
 @app.post("/process_text")
 async def process_text(request: TextRequest):
     try:
+        print(request.prompt)
         result = ConnectLLM.senText(request.prompt)
-        if "error" in result:
-            raise HTTPException(status_code=400, detail=result["error"])
+       
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -38,4 +38,4 @@ async def process_image(request: ImageRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=5000, reload=True)
