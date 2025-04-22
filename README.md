@@ -1,5 +1,30 @@
 # AI RAG API
 
+## Virtual Environment Setup
+
+1. Create a virtual environment:
+```bash
+# Windows
+python -m venv venv
+
+# Linux/Mac
+python3 -m venv venv
+```
+
+2. Activate the virtual environment:
+```bash
+# Windows
+venv\Scripts\activate
+
+# Linux/Mac
+source venv/bin/activate
+```
+
+3. To deactivate when you're done:
+```bash
+deactivate
+```
+
 ## Setup Instructions
 
 1. Create a `.env` file in the root directory with the following variables:
